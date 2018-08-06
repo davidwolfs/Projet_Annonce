@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtVAjoutArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Ajout d'un nouvel article" />
+
+    <Button
+        android:id="@+id/btnRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtVAjoutArticle"
+        android:layout_marginTop="19dp"
+        android:text="Retour" />
+
+    <TextView
+        android:id="@+id/txtVNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/eTxtNom"
+        android:text="Nom (*)" />
+
+    <TextView
+        android:id="@+id/txtVDescriptif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtVNom"
+        android:layout_marginTop="28dp"
+        android:text="Descriptif détaillé (*)" />
+
+    <TextView
+        android:id="@+id/txtVPrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtVDescriptif"
+        android:layout_marginTop="38dp"
+        android:text="Prix (*)" />
+
+    <TextView
+        android:id="@+id/txtVEtat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtVPrix"
+        android:layout_marginTop="36dp"
+        android:text="Etat (*)" />
+
+    <TextView
+        android:id="@+id/txtVVille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtVEtat"
+        android:layout_marginTop="40dp"
+        android:text="Ville (*)" />
+
+    <TextView
+        android:id="@+id/txtVLivraison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtVVille"
+        android:layout_marginTop="41dp"
+        android:text="Livraison" />
+
+    <Button
+        android:id="@+id/btnAjouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:text="Ajouter" />
+
+    <EditText
+        android:id="@+id/eTxtNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRetour"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/txtVAjoutArticle"
+        android:layout_toRightOf="@+id/txtVAjoutArticle"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/eTxtDescriptifDetaille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtVDescriptif"
+        android:layout_alignBottom="@+id/txtVDescriptif"
+        android:layout_alignLeft="@+id/eTxtNom"
+        android:layout_alignStart="@+id/eTxtNom"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/eTxtPrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eTxtDescriptifDetaille"
+        android:layout_alignStart="@+id/eTxtDescriptifDetaille"
+        android:layout_below="@+id/eTxtDescriptifDetaille"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eTxtPrix"
+        android:layout_alignStart="@+id/eTxtPrix"
+        android:layout_alignTop="@+id/txtVEtat"
+        android:id="@+id/rGrpEtat">
+
+        <RadioButton
+            android:id="@+id/rBtnNeuf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtVVille"
+            android:layout_alignEnd="@+id/eTxtPrix"
+            android:layout_alignRight="@+id/eTxtPrix"
+            android:text="Neuf" />
+
+        <RadioButton
+            android:id="@+id/rBtnUtilise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioGroup"
+            android:layout_alignStart="@+id/radioGroup"
+            android:layout_alignTop="@+id/radioGroup"
+            android:text="Utilisé" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/eTxtVille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/eTxtPrix"
+        android:layout_alignRight="@+id/eTxtPrix"
+        android:layout_below="@+id/rGrpEtat"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eTxtVille"
+        android:layout_alignStart="@+id/eTxtVille"
+        android:layout_below="@+id/eTxtVille"
+        android:id="@+id/radioGroup3" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup3"
+        android:layout_alignStart="@+id/radioGroup3"
+        android:layout_alignTop="@+id/txtVLivraison"
+        android:id="@+id/rGrpLivraison">
+
+        <RadioButton
+            android:id="@+id/rBtnEnvoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnAjouter"
+            android:layout_toEndOf="@+id/rGrpLivraison"
+            android:layout_toRightOf="@+id/rGrpLivraison"
+            android:text="Envoi" />
+
+        <RadioButton
+            android:id="@+id/rBtnLivraison"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rGrpLivraison"
+            android:layout_toEndOf="@+id/rGrpLivraison"
+            android:layout_toRightOf="@+id/rGrpLivraison"
+            android:text="Main propres" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtVMsgError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnAjouter"
+        android:layout_alignEnd="@+id/eTxtVille"
+        android:layout_alignLeft="@+id/rGrpLivraison"
+        android:layout_alignRight="@+id/eTxtVille"
+        android:layout_alignStart="@+id/rGrpLivraison"
+        android:layout_alignTop="@+id/btnAjouter" />
+
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Projet_Annonce</string>
+    <string name="btnAjoutArticle">Poster un nouvel article</string>
+    <string name="btnRechercherArticlePrix">Rechercher un article par prix</string>
+    <string name="btnRechercherArticleVille">Rechercher un article par prix</string>
+</resources>
