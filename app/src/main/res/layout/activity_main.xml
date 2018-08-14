@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation = "vertical"
-    tools:context="com.example.davidwolfs.projet_annonce.MainActivity">
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/textView" />
+        android:orientation="vertical"
+        tools:context="com.example.davidwolfs.projet_annonce.MainActivity">
 
-    <Button
-        android:id="@+id/btnAjoutArticle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp"
-        android:text="Poster un nouvel article" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnAjoutArticle"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btnAjoutArticle"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnRechercherArticlePrix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btnAjoutArticle"
-        android:layout_alignLeft="@+id/btnAjoutArticle"
-        android:layout_alignRight="@+id/btnAjoutArticle"
-        android:layout_alignStart="@+id/btnAjoutArticle"
-        android:layout_below="@+id/btnAjoutArticle"
-        android:layout_marginTop="43dp"
-        android:text="Rechercher un article par prix" />
+        <Button
+            android:id="@+id/btnAjoutArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="59dp"
+            android:text="@string/btnAjoutArticle" />
 
-    <Button
-        android:id="@+id/btnRechercherArticleVille"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btnRechercherArticlePrix"
-        android:layout_alignLeft="@+id/btnRechercherArticlePrix"
-        android:layout_alignRight="@+id/btnRechercherArticlePrix"
-        android:layout_alignStart="@+id/btnRechercherArticlePrix"
-        android:layout_below="@+id/btnRechercherArticlePrix"
-        android:layout_marginTop="44dp"
-        android:text="Rechercher un article par ville" />
+        <Button
+            android:id="@+id/btnRechercherArticlePrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnAjoutArticle"
+            android:layout_alignLeft="@+id/btnAjoutArticle"
+            android:layout_alignRight="@+id/btnAjoutArticle"
+            android:layout_alignStart="@+id/btnAjoutArticle"
+            android:layout_below="@+id/btnAjoutArticle"
+            android:layout_marginTop="43dp"
+            android:text="@string/btnRechercherArticlePrix" />
+
+        <Button
+            android:id="@+id/btnRechercherArticleVille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnRechercherArticlePrix"
+            android:layout_alignLeft="@+id/btnRechercherArticlePrix"
+            android:layout_alignRight="@+id/btnRechercherArticlePrix"
+            android:layout_alignStart="@+id/btnRechercherArticlePrix"
+            android:layout_below="@+id/btnRechercherArticlePrix"
+            android:layout_marginTop="44dp"
+            android:text="@string/btnRechercherArticleVille" />
 
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

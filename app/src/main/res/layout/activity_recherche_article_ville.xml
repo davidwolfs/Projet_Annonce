@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.davidwolfs.projet.RechercheArticleLieu">
+    tools:context="com.example.davidwolfs.projet_annonce.RechercheArticleLieuActivity">
 
     <TextView
+        android:id="@+id/btnRechercherArticleVille"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recherche d'un article par ville"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btnRetour"
+        android:layout_toRightOf="@+id/btnRetour"
+        android:text="@string/btnRechercherArticleVille"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnRetour"
@@ -26,7 +29,38 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="14dp"
-        android:text="Retour" />
+        android:text="@string/btnRetour" />
+
+    <TextView
+        android:id="@+id/textViewVille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRetour"
+        android:layout_marginTop="86dp"
+        android:layout_toEndOf="@+id/btnRetour"
+        android:layout_toRightOf="@+id/btnRetour"
+        android:text="@string/textViewVille" />
+
+    <EditText
+        android:id="@+id/editTextVille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewVille"
+        android:layout_alignStart="@+id/textViewVille"
+        android:layout_below="@+id/textViewVille"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnRechercherVille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextVille"
+        android:layout_alignStart="@+id/editTextVille"
+        android:layout_below="@+id/editTextVille"
+        android:layout_marginTop="59dp"
+        android:text="@string/btnRechercherVille"/>
 
 
 </RelativeLayout>

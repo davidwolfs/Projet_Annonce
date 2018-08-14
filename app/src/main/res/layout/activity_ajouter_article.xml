@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +19,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Ajout d'un nouvel article" />
+        android:text="@string/btnAjoutArticle" />
 
     <Button
         android:id="@+id/btnRetour"
@@ -23,7 +29,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtVAjoutArticle"
         android:layout_marginTop="19dp"
-        android:text="Retour" />
+        android:text="@string/btnRetour" />
 
     <TextView
         android:id="@+id/txtVNom"
@@ -32,7 +38,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/eTxtNom"
-        android:text="Nom (*)" />
+        android:text="@string/txtVNom" />
 
     <TextView
         android:id="@+id/txtVDescriptif"
@@ -42,7 +48,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtVNom"
         android:layout_marginTop="28dp"
-        android:text="Descriptif détaillé (*)" />
+        android:text="@string/txtVDescriptif" />
 
     <TextView
         android:id="@+id/txtVPrix"
@@ -52,7 +58,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtVDescriptif"
         android:layout_marginTop="38dp"
-        android:text="Prix (*)" />
+        android:text="@string/txtVPrix" />
 
     <TextView
         android:id="@+id/txtVEtat"
@@ -72,7 +78,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtVEtat"
         android:layout_marginTop="40dp"
-        android:text="Ville (*)" />
+        android:text="@string/txtVEtat" />
 
     <TextView
         android:id="@+id/txtVLivraison"
@@ -82,7 +88,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtVVille"
         android:layout_marginTop="41dp"
-        android:text="Livraison" />
+        android:text="@string/txtVLivraison" />
 
     <Button
         android:id="@+id/btnAjouter"
@@ -92,7 +98,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp"
-        android:text="Ajouter" />
+        android:text="@string/btnAjouter" />
 
     <EditText
         android:id="@+id/eTxtNom"
@@ -139,18 +145,12 @@
             android:id="@+id/rBtnNeuf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/txtVVille"
-            android:layout_alignEnd="@+id/eTxtPrix"
-            android:layout_alignRight="@+id/eTxtPrix"
             android:text="Neuf" />
 
         <RadioButton
             android:id="@+id/rBtnUtilise"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/radioGroup"
-            android:layout_alignStart="@+id/radioGroup"
-            android:layout_alignTop="@+id/radioGroup"
             android:text="Utilisé" />
 
     </RadioGroup>
@@ -185,18 +185,12 @@
             android:id="@+id/rBtnEnvoi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btnAjouter"
-            android:layout_toEndOf="@+id/rGrpLivraison"
-            android:layout_toRightOf="@+id/rGrpLivraison"
             android:text="Envoi" />
 
         <RadioButton
             android:id="@+id/rBtnLivraison"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/rGrpLivraison"
-            android:layout_toEndOf="@+id/rGrpLivraison"
-            android:layout_toRightOf="@+id/rGrpLivraison"
             android:text="Main propres" />
     </RadioGroup>
 
@@ -213,3 +207,6 @@
 
 
 </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Projet_Annonce</string>
+    <string name="textViewBienvenue">Bienvenue</string>
+    <string name="btnAjoutArticle">Poster un nouvel article</string>
+    <string name="btnRechercherArticlePrix">Rechercher un article par prix</string>
+    <string name="btnRechercherArticleVille">Rechercher un article par ville</string>
+    <string name="txtVAjoutArticle">Ajout</string>
+    <string name="btnRetour">Retour</string>
+    <string name="txtVNom">Nom (*)</string>
+    <string name="txtVDescriptif">Descriptif détaillé (*)</string>
+    <string name="txtVPrix">Prix (*)</string>
+    <string name="txtVEtat">Etat (*)</string>
+    <string name="txtVVille">Ville (*)</string>
+    <string name="txtVLivraison">Livraison</string>
+    <string name="btnAjouter">Ajouter</string>
+    <string name="rBtnNeuf">Neuf</string>
+    <string name="rBtnUtilise">Utilisé</string>
+    <string name="rBtnEnvoi">Envoyé</string>
+    <string name="rBtnLivraison">Mains propres</string>
+    <string name="prixMax">Prix maximum</string>
+    <string name="prixMin">Prix minimum</string>
+    <string name="btnRechercherParPrix">Rechercher</string>
+    <string name="textViewVille">Ville</string>
+    <string name="btnRechercherVille">Rechercher</string>
+    <string name="txtResultatRecherche">Résultats recherche</string>
+</resources>

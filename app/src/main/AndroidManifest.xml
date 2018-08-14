@@ -22,8 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".AjouterArticleActivity" />
-        <activity android:name=".RechercheArticleLieu" />
-        <activity android:name=".RechercheArticlePrix"></activity>
+        <activity android:name=".RechercheArticleLieuActivity" />
+        <activity android:name=".RechercheArticlePrixActivity"/>
+        <activity android:name=".AfficherArticleParPrixActivity"/>
     </application>
 
 </manifest>

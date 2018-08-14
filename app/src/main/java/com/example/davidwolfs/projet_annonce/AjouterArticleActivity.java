@@ -85,7 +85,7 @@ public class AjouterArticleActivity extends AppCompatActivity {
                         livraison = "Main propres";
                     }
 
-                    CreerArticle article = new CreerArticle(nom, descriptif, prix, etat, ville, livraison);
+                    Article article = new Article(nom, descriptif, prix, etat, ville, livraison);
                     article.execute();
                     Intent otherActivity = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(otherActivity);

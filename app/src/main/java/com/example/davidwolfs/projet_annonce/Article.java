@@ -24,17 +24,23 @@ import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.TextView;
+import android.widget.Toast;
 
-class CreerArticle extends AsyncTask
+class Article extends AsyncTask
 {
     private String nom;
     private String descriptif;
@@ -43,7 +49,7 @@ class CreerArticle extends AsyncTask
     private String ville;
     private String livraison;
 
-    public CreerArticle(String nom, String descriptif, double prix, String etat, String ville, String livraison)
+    public Article(String nom, String descriptif, double prix, String etat, String ville, String livraison)
     {
         this.nom=nom;
         this.descriptif=descriptif;
@@ -101,9 +107,6 @@ class CreerArticle extends AsyncTask
         this.livraison = livraison;
     }
 
-
-
-
     @Override
     protected void onPreExecute()
     {
@@ -139,7 +142,7 @@ class CreerArticle extends AsyncTask
         }
     }*/
         try{
-            String link = "http://192.168.1.42:80/annonce/connectToDB.php";
+            String link = "http://192.168.1.44:80/annonce/creerArticle.php";
             String data  = URLEncoder.encode("nom", "UTF-8") + "=" +
                     URLEncoder.encode(nom, "UTF-8");
             data += "&" + URLEncoder.encode("descriptif", "UTF-8") + "=" +
@@ -181,6 +184,50 @@ class CreerArticle extends AsyncTask
             System.out.println("Exception: " + e.getMessage());
             return new String("Exception: " + e.getMessage());
         }
+
+        /*try{
+            String link = "http://192.168.1.30:80/annonce/creerArticle.php";
+            String data  = URLEncoder.encode("nom", "UTF-8") + "=" +
+                    URLEncoder.encode(nom, "UTF-8");
+            data += "&" + URLEncoder.encode("descriptif", "UTF-8") + "=" +
+                    URLEncoder.encode(descriptif, "UTF-8");
+            data += "&" + URLEncoder.encode("prix", "UTF-8") + "=" +
+                    URLEncoder.encode(prix+"", "UTF-8");
+            data += "&" + URLEncoder.encode("etat", "UTF-8") + "=" +
+                    URLEncoder.encode(etat, "UTF-8");
+            data += "&" + URLEncoder.encode("ville", "UTF-8") + "=" +
+                    URLEncoder.encode(ville, "UTF-8");
+            data += "&" + URLEncoder.encode("livraison", "UTF-8") + "=" +
+                    URLEncoder.encode(livraison, "UTF-8");
+
+            System.out.println(link+data);
+            URL url = new URL(link);
+            URLConnection conn = url.openConnection();
+
+            conn.setDoOutput(true);
+            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+            wr.write( data );
+            wr.flush();
+
+            BufferedReader reader = new BufferedReader(new
+                    InputStreamReader(conn.getInputStream()));
+
+            StringBuilder sb = new StringBuilder();
+            String line = null;
+
+            // Read Server Response
+            while((line = reader.readLine()) != null) {
+                sb.append(line);
+                break;
+            }
+            System.out.println("Resultat requete Creer article : "+sb.toString());
+            return sb.toString();
+
+        } catch(Exception e){
+            System.out.println("Exception: " + e.getMessage());
+            return new String("Exception: " + e.getMessage());
+        }*/
     }
 }
 
@@ -191,7 +238,34 @@ class CreerArticle extends AsyncTask
 
     protected void onPostExecute(String result)
     {
+        //Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+        System.out.println("RESULTAT  : " + result);
+    }
 
+    public Article(JSONObject object){
+        try {
+            this.nom = object.getString("nom");
+            this.descriptif = object.getString("descriptif");
+            this.prix = object.getDouble("prix");
+            this.etat = object.getString("etat");
+            this.ville = object.getString("ville");
+            this.livraison = object.getString("livraison");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static ArrayList<Article> fromJson(JSONArray jsonObjects) {
+        ArrayList<Article> articles = new ArrayList<Article>();
+        for (int i = 0; i < jsonObjects.length(); i++) {
+            try {
+                articles.add(new Article(jsonObjects.getJSONObject(i)));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return articles;
     }
 
 }

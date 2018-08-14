@@ -3,9 +3,6 @@ package com.example.davidwolfs.projet_annonce;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -39,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnRechercherArticleVille.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent otherActivity = new Intent(getApplicationContext(), RechercheArticleLieu.class);
+                Intent otherActivity = new Intent(getApplicationContext(), RechercheArticleLieuActivity.class);
                 startActivity(otherActivity);
             }
         });
@@ -49,12 +46,10 @@ public class MainActivity extends AppCompatActivity {
         btnRechercherArticlePrix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent otherActivity = new Intent(getApplicationContext(), RechercheArticlePrix.class);
+                Intent otherActivity = new Intent(getApplicationContext(), RechercheArticlePrixActivity.class);
                 startActivity(otherActivity);
             }
         });
 
     }
-
-
 }
